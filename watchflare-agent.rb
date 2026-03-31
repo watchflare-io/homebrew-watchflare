@@ -11,7 +11,7 @@ class WatchflareAgent < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/Kilian-Pichard/watchflare/releases/download/v0.29.0/watchflare-agent_0.29.0_darwin_amd64.tar.gz"
-      sha256 "cd5d5188350c80851ecbb852d82ee7dc25c19c39339c29522cd6496eac74b56a"
+      sha256 "26f6cff832279267e73e2fc55b5a8eea495ad3ea141016837fc1117dc11fe44a"
 
       define_method(:install) do
         bin.install "watchflare-agent"
@@ -26,7 +26,7 @@ class WatchflareAgent < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/Kilian-Pichard/watchflare/releases/download/v0.29.0/watchflare-agent_0.29.0_darwin_arm64.tar.gz"
-      sha256 "a3b2ce79b6ad2399afce0f446e3e8115cc8bad606f9d758e581fb1ce623dcb97"
+      sha256 "eb0813b86c6eb68fc6f85bed93c4b903b14d7f8d6ff9d1ff1d1f9388f03a61b4"
 
       define_method(:install) do
         bin.install "watchflare-agent"
@@ -44,7 +44,7 @@ class WatchflareAgent < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/Kilian-Pichard/watchflare/releases/download/v0.29.0/watchflare-agent_0.29.0_linux_amd64.tar.gz"
-      sha256 "d1b01783d46d6cad1c5069e2bd8bd8b17b32fe3f190b24966dad4d91b0e8a35b"
+      sha256 "94c6657aad55cec91500a2605748e52a240e5668f529fcc5316e535a62bd0bea"
       define_method(:install) do
         bin.install "watchflare-agent"
         (bin/"watchflare-agent-launcher").write <<~EOS
@@ -58,7 +58,7 @@ class WatchflareAgent < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/Kilian-Pichard/watchflare/releases/download/v0.29.0/watchflare-agent_0.29.0_linux_arm64.tar.gz"
-      sha256 "345fdf225312f1af8450de560ccd37f68badf9b87ca189fe3515d6fae860d131"
+      sha256 "9cec41a9c57baf59368b55e0c366a0330254f95490b2e6e422f2cbeeca71d702"
       define_method(:install) do
         bin.install "watchflare-agent"
         (bin/"watchflare-agent-launcher").write <<~EOS
